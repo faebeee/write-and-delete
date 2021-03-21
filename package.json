@@ -9,6 +9,9 @@
   },
   "author": "faebeee@gmail.com",
   "license": "ISC",
+  "files": [
+    "src/index.js"
+  ],
   "bugs": {
     "url": "https://github.com/faebeee/write-and-delete/issues"
   },

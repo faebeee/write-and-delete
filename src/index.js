@@ -3,7 +3,7 @@
  *     timeout: number,
  *     loop: boolean,
  *     speed: number,
- *     speedVariation: number,
+ *     speedVariation?: number,
  *     errorQuota?: number,
  *     errorCharacterMap?: string,
  *     cursor?: string,
@@ -12,17 +12,17 @@
 
 function writeAndDelete(documentOrSelector, list, options) {
     const cursorElement = document.createElement('span');
-    cursorElement.innerText = options.cursor || '';
+    cursorElement.innerHTML = options.cursor || '_';
     cursorElement.style = `
     color: currentColor; 
-    position: absolute; 
+    position: relative; 
     width: 1ch;
     `;
     cursorElement.animate([
         { opacity: 0 },
         { opacity: 1 },
     ], {
-        duration: options.cursorSpeed,
+        duration: options.cursorSpeed || 400,
         iterations: Infinity,
         direction: 'alternate',
         easing: 'ease-in-out',
@@ -37,7 +37,6 @@ function writeAndDelete(documentOrSelector, list, options) {
      */
     const write = (element, text, { cursor }) => {
         element.innerText = text;
-        cursorElement.innerText = cursor;
         element.appendChild(cursorElement);
     }
 

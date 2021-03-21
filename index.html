@@ -52,18 +52,15 @@
 </script>
 <script>
     writeAndDelete(document.querySelector("#header"), [
-        `Buenas dias`,
-        "Good morning",
-        "Guten Morgen ",
-        "Buon giorno",
+        `Buenas dias!`,
+        "Good morning!",
+        "Guten Morgen!",
+        "Buon giorno!",
     ], {
         timeout: 1000,
-        loop: true,
         speed: 200,
-        speedVariation: 2,
-        errorQuota: 0.5,
-        cursor: '_',
-        cursorSpeed: 300,
+        loop: true,
+        errorQuota: 0.05
     });
 </script>
 </body>
