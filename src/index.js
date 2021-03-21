@@ -106,7 +106,9 @@ function writeAndDelete(documentOrSelector, list, options) {
     function* writerGenerator(container, list, options) {
         for (let i = 0; i < list.length; i++) {
             yield () => textWriter(container, list[i], 'write', options);
-            yield () => textWriter(container, list[i], 'delete', options);
+            if (i + 1 < list.length || options.loop) {
+                yield () => textWriter(container, list[i], 'delete', options);
+            }
         }
     }
 
