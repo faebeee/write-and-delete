@@ -20,11 +20,33 @@
             align-items: center;
             height: 100vh;
         }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link-wrapper {
+            margin-top: 48px;
+        }
+
+        .link {
+            color: #333333;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 <div class="wrapper">
-    <h1 id="header"></h1>
+    <div class="content">
+        <h1 id="header"></h1>
+        <div class="link-wrapper">
+            <a class="link" href="https://github.com/faebeee/write-and-delete">Github</a> |
+            <a class="link" href="https://github.com/faebeee/write-and-delete">NPM</a>
+        </div>
+    </div>
 </div>
 <script src="src/index.js">
 </script>
@@ -43,7 +65,6 @@
         cursor: '_',
         cursorSpeed: 300,
     });
-
 </script>
 </body>
 </html>

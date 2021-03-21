@@ -1,0 +1,16 @@
+{
+  "name": "write-and-delete",
+  "version": "0.1.0",
+  "description": "Small js library to animate some writing effect through a list of strings.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faebeee/write-and-delete.git"
+  },
+  "author": "faebeee@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faebeee/write-and-delete/issues"
+  },
+  "homepage": "https://github.com/faebeee/write-and-delete#readme"
+}
