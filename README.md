@@ -3,6 +3,7 @@
 Small js library to animate some writing effect through a list of strings.
 
 ## [Demo](https://faebeee.github.io/write-and-delete/)
+![Demo](https://raw.githubusercontent.com/faebeee/write-and-delete/master/assets/write_with_error.gif)
 
 ## [Codepen](https://codepen.io/faebeee/pen/vYyoPqY)
 
