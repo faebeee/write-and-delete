@@ -3,6 +3,8 @@
 Small js library to animate some writing effect through a list of strings.
 It also supports settings for typo errors, to make it more human likely.
 
+__Note__ It uses generators, so it's only supported in more modern browsers.
+
 ## [Demo](https://faebeee.github.io/write-and-delete/)
 ![Demo](https://raw.githubusercontent.com/faebeee/write-and-delete/master/assets/write_with_error.gif)
 
@@ -18,7 +20,7 @@ It also supports settings for typo errors, to make it more human likely.
 
 ```js
   writeAndDelete(document.querySelector("#header"), [
-    "Buenas dias",
+    "Buenos dias",
     "Good morning",
     "Guten Morgen ",
     "Buon giorno",
