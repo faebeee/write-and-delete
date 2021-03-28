@@ -15,7 +15,8 @@
     "author": "faebeee@gmail.com",
     "license": "ISC",
     "files": [
-        "lib/index.js"
+        "dist/lib.js",
+        "dist/webcomponent.js.js"
     ],
     "bugs": {
         "url": "https://github.com/faebeee/write-and-delete/issues"
