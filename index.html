@@ -1,67 +1,68 @@
 <html>
-<head>
-    <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            color: #333;
-            background-color: #f7f7f7;
-        }
+    <head>
+        <style>
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                color: #333;
+                background-color: #f7f7f7;
+            }
 
-        h1 {
-            margin: 0;
-            font-size: 40px;
-            height: 40px;
-            line-height: 1;
-        }
+            h1 {
+                margin: 0;
+                font-size: 40px;
+                height: 40px;
+                line-height: 1;
+            }
 
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
 
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .link-wrapper {
-            margin-top: 48px;
-        }
+            .link-wrapper {
+                margin-top: 48px;
+            }
 
-        .link {
-            color: #333333;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-<div class="wrapper">
-    <div class="content">
-        <h1 id="header"></h1>
-        <div class="link-wrapper">
-            <a class="link" href="https://github.com/faebeee/write-and-delete">Github</a> |
-            <a class="link" href="https://www.npmjs.com/package/write-and-delete">NPM</a>
+            .link {
+                color: #333333;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <h1 id="header"></h1>
+                <write-and-delete timeout="500" speed="100">Hello, World, fancy, pancy</write-and-delete>
+                <div class="link-wrapper">
+                    <a class="link" href="https://github.com/faebeee/write-and-delete">Github</a> |
+                    <a class="link" href="https://www.npmjs.com/package/write-and-delete">NPM</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<script src="src/index.js">
-</script>
-<script>
-    writeAndDelete(document.querySelector("#header"), [
-        `Buenos dias!`,
-        "Good morning!",
-        "Guten Morgen!",
-        "Buon giorno!",
-    ], {
-        timeout: 1000,
-        speed: 200,
-        loop: true,
-        errorQuota: 0.05
-    });
-</script>
-</body>
+        <script src="dist/lib.js"></script>
+        <script src="dist/webcomponent.js" defer></script>
+        <script>
+            writeAndDelete(document.querySelector("#header"), [
+                `Buenos dias!`,
+                "Good morning!",
+                "Guten Morgen!",
+                "Buon giorno!",
+            ], {
+                timeout: 1000,
+                speed: 200,
+                loop: true,
+                errorQuota: 0.05,
+            });
+        </script>
+    </body>
 </html>

@@ -1,19 +1,28 @@
 {
-  "name": "write-and-delete",
-  "version": "1.0.0",
-  "description": "Small js library to animate some writing effect through a list of strings.",
-  "main": "src/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/faebeee/write-and-delete.git"
-  },
-  "author": "faebeee@gmail.com",
-  "license": "ISC",
-  "files": [
-    "src/index.js"
-  ],
-  "bugs": {
-    "url": "https://github.com/faebeee/write-and-delete/issues"
-  },
-  "homepage": "https://github.com/faebeee/write-and-delete#readme"
+    "name": "write-and-delete",
+    "version": "1.0.0",
+    "description": "Small js library to animate some writing effect through a list of strings.",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "npm run build:lib && npm run build:webcomponent",
+        "build:webcomponent": "npx esbuild src/web-component.js --minify  --bundle --outfile=dist/webcomponent.js",
+        "build:lib": "npx esbuild src/index.js --minify --bundle --outfile=dist/lib.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/faebeee/write-and-delete.git"
+    },
+    "author": "faebeee@gmail.com",
+    "license": "ISC",
+    "files": [
+        "lib/index.js"
+    ],
+    "bugs": {
+        "url": "https://github.com/faebeee/write-and-delete/issues"
+    },
+    "homepage": "https://github.com/faebeee/write-and-delete#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "esbuild": "^0.10.2"
+    }
 }

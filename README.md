@@ -10,13 +10,16 @@ __Note__ It uses generators, so it's only supported in more modern browsers.
 
 ## [Codepen](https://codepen.io/faebeee/pen/vYyoPqY)
 
-## Install
+## Usage
+
+## JavaScript 
+
+Import the library
 
 ```html
-<script src="https://unpkg.com/write-and-delete@VERSION/src/index.js"></script>
-```
-
-## Usage
+<script src="https://unpkg.com/write-and-delete@VERSION/dist/lib.js"></script>
+``` 
+and then it's available in the global `window` scope.
 
 ```js
   writeAndDelete(document.querySelector("#header"), [
@@ -32,6 +35,23 @@ __Note__ It uses generators, so it's only supported in more modern browsers.
     cursor: '_',
     cursorSpeed: 300,
 });
+```
+
+### Web Component
+this library is also available as a webcomponent.
+
+Import the component 
+
+```html
+<script src="https://unpkg.com/write-and-delete@VERSION/dist/webcomponent.js"></script>
+```
+
+and then set it up in your markup
+
+```html
+<h1>
+    <write-and-delete timeout="1000" loop="true" speed="200">JavaScript, HTML5, CSS3</write-and-delete>
+</h1>
 ```
 
 ## Options
